@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Tutor</title>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>AI companion</h1>
+
+<div class="topic-box">
+
+<textarea id="topic" style="width: 800px; height: 40px; border-radius: 10px;" placeholder="                                             Enter topic"></textarea>
+
+<button onclick="startTutor()">Start</button>
+</div>
+
+<div id="chat" class="chat-container"></div>
+
+<div class="input-area">
+
+<textarea id="answer" style="width: 720px; height: 50px; border-radius: 10px;" placeholder="                                          Type your answer"></textarea>
+
+<button onclick="sendAnswer()">Send</button>
+
+<button onclick="startVoiceInput()">🎤</button>
+
+</div>
+
+<div id="chartBox"></div>
+
+<script src="{% static 'js/app.js' %}"></script>
+
+</body>
+
+</html>
